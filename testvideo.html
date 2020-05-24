@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link id="css-ori" rel="stylesheet" href="css/main.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap" rel="stylesheet">
+    <script src="js/video.js"></script>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    
+</head>
+
+<body>
+    <div class="barraprincipal">
+        <p class="titulo-barraprincipal">¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de
+            visitas: 12.765.803</p>
+    </div>
+    <div class="main-container">
+        <header>
+            <div class="logo"><a href="index.html"><img id="logo" src="img/gifOF_logo.png" alt="logo"></a></div>
+            <ul class="menu">
+                <li class="buttom-gifos"><a href="creategifos.html">Crear Gifos</a></li>
+
+                <li class="buttom-gifos">Elegir Tema</li>
+                <li id="buttom-gifos-submenu" onclick="menudesplegable()">
+                    <img id="dropdown" src="img/assets/dropdown.svg" alt="logo">
+                </li>
+
+                <li><a href="#">Mis Guifos</a></li>
+            </ul>
+        </header>
+
+
+        <div id="seccion-tendencias"></div>
+
+        <section class="sugerencias">
+            <div class="tesugerimos">
+                <p class=title-tesugerimos>Hoy te sugerimos: </p>
+            </div>
+
+        </section>
+        <!--<li id="buttom-gifos-submenu" onclick="">-->
+        <div class="test">
+            <div class="titulo-contenedor-video">
+                <p class="titulo-barraprincipal">Un Chequeo Antes de Empezar
+            </div>
+            <video class="video" controls autoplay playsinline src=""> </video>
+            <button id="btn-start-recording">Start Recording</button>
+            <button id="btn-stop-recording" disabled>Stop Recording</button>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+//     var video = document.querySelector('video');
+
+//     function captureCamera(callback) {
+//         navigator.mediaDevices.getUserMedia({ audio: true, video: { width: 832, height: 434 } }).then(function (camera) {
+//             callback(camera);
+//         }).catch(function (error) {
+//             alert('Unable to capture your camera. Please check console logs.');
+//             console.error(error);
+//         });
+//     }
+
+//     function stopRecordingCallback() {
+//         video.src = video.srcObject = null;
+//         video.muted = false;
+//         video.volume = 1;
+//         video.src = URL.createObjectURL(recorder.getBlob());
+//         let form = new FormData();
+//         form.append('file', recorder.getBlob(), 'myGif.gif');
+        
+//         fetch("https://upload.giphy.com/v1/gifs?file=" upload + "&api_key=" + apiKey, { method: "POST" })
+//         .then(response => {
+//         console.log(response.status);
+//         return response.json;
+//     }
+// )
+
+
+
+
+      //  fetch('https://upload.giphy.com/v1/gifs?api_key=WCBtXMmRUP3tRuBx84k3dbp0k3qpYxqf', 
+   //     {
+     ///      mode: 'no-cors'
+     //   })
+    //    .then(data => {
+     //       console.log("segundo then");
+     //       return data;
+     //   })
+     //   .catch(error => {
+     //       return error;
+      //  });
+
+
+        //localStorage.setItem("file", data);
+
+
+        //recorder.camera.stop();
+        //recorder.destroy();
+        //recorder = null;
+
+   
+    // var recorder; // globally accessible
+
+    // document.getElementById('btn-start-recording').onclick = function () {
+    //     this.disabled = true;
+    //     captureCamera(function (camera) {
+    //         video.muted = true;
+    //         video.volume = 0;
+    //         video.srcObject = camera;
+
+    //         recorder = RecordRTC(camera, {
+    //             type: 'video'
+    //         });
+
+    //         recorder.startRecording();
+
+    //         // release camera on stopRecording
+    //         recorder.camera = camera;
+
+    //         document.getElementById('btn-stop-recording').disabled = false;
+    //     });
+    // };
+
+    // document.getElementById('btn-stop-recording').onclick = function () {
+    //     this.disabled = true;
+    //     recorder.stopRecording(stopRecordingCallback);
+    // };
+
+   
+   
+
+
+</script>
