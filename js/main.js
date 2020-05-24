@@ -51,11 +51,18 @@ function getTrendingData() {
          var node = document.createElement('div');
          var listtittle = document.createElement('div');
          node.classList.add('div-tendencias'+ i);
-         listtittle.classList.add('footertrending');
+         listtittle.classList.add('footertrending'+ i);
          listtittle.appendChild(document.createTextNode(urlmore));
+
          let nodetrendyImagen = document.createElement('img');
          nodetrendyImagen.classList.add('img-fluid'); //cambiar por la clase que necesite para cargar bien la imagenes
          nodetrendyImagen.setAttribute("src", trendyImagen);
+         node.addEventListener("mouseover",function(event){
+          document.querySelector('.footertrending'+i).style.display= "block";
+         })
+         node.addEventListener("mouseout",function(event){
+          document.querySelector('.footertrending'+i).style.display= "none";
+         })
          node.appendChild(nodetrendyImagen);  
          node.appendChild(listtittle);
          _tenGifs.appendChild(node);
@@ -64,29 +71,9 @@ function getTrendingData() {
       ;
 
          
-        // node.addEventListener("mouseover", changeTheme);
        }
    });
  }
-
- footeroff();
- function footeroff(){
-     var element = document.getElementsByTagName(".img-fluid");
-//document.getElementsByTagName(".footertrending").style.visibility ='hidden';
-var footertrending =  document.querySelector(".footertrending");
-  footertrending.style = 'hidden';
-
-element.mouseenter = changefooter();
- }
-
-//  function changefooter(){
-//    console.log('llegue acá');
-
-//   var footertrending =  document.querySelector(".footertrending");
-//   footertrending.style = 'hidden';
-// document.getElementsByTagName("footertrending").style.display ="block"; }
-
-
 
  function getRandom() {
   var j = 2;
@@ -127,15 +114,19 @@ element.mouseenter = changefooter();
      var _teSugerimos = document.getElementById("contenido-sugerencia");
      
        var teSugerimosImagen = res.data[k].images.downsized_large.url;
+       var href = res.data[k].url ;
        var node = document.createElement('div');
        var titulo = document.createElement('div');
        var vermas= document.createElement('div');
        var p =  document.createElement('p');
+       var url = document.createElement('a');
        node.classList.add('div-tesugerimos1');
        titulo.classList.add('div-titulo-1');
        vermas.classList.add('vermas');
        p.classList.add('texto-vermas');
+       url.setAttribute("src",href);
        p.appendChild(document.createTextNode('Ver más...'));
+       p.appendChild(url);
        titulo.appendChild(document.createTextNode('#Tennis'));
        let nodetesugerimosimagen = document.createElement('img');
        nodetesugerimosimagen.classList.add('img-sugerencia'); //cambiar por la clase que necesite para cargar bien la imagenes
@@ -166,6 +157,7 @@ function getRandom2() {
        vermas.classList.add('vermas');
        p.classList.add('texto-vermas');
        p.appendChild(document.createTextNode('Ver más...'));
+    
        let nodetesugerimosimagen = document.createElement('img');
        nodetesugerimosimagen.classList.add('img-sugerencia'); //cambiar por la clase que necesite para cargar bien la imagenes
        nodetesugerimosimagen.setAttribute("src",teSugerimosImagen );
@@ -209,6 +201,17 @@ function getRandom3() {
 } 
 
 
+let sailor_day = "css/main.css";
+let sailor_night = "css/css-modify.css";
+
+function ver() {
+  document.getElementById("style-list").style.display = "block";
+}
+
+function ocultar() {
+  document.getElementById("style-list").style.display = "none";
+}
+
 
 
 //Menu desplegable
@@ -217,20 +220,18 @@ function menudesplegable(){
       document.querySelector(".submenu").style.display= "block";
 }
 
-function ocultarmenudesplegable(){
-    document.querySelector(".submenu").style.display= "none";
+function ocultar(){
+   document.querySelector(".submenu").style.display= "none";
 }
-
- function changeTheme(){
-      document.getElementById('css-ori').href = 'css/main.css';
-      document.getElementById('logo').src='img/gifOF_logo.png';
-      return;
+ function day(){
+     document.getElementById('css-ori').href = 'css/main.css';
+    document.getElementById('logo').src='img/gifOF_logo.png';
+     return;
  }
 
-
- function changeThemeDark(){
-  document.getElementById('css-ori').href = 'css/css-modify.css';
-  document.getElementById('logo').src='img/gifOF_logo_dark.png';
+ function night(){
+ document.getElementById('css-ori').href = 'css/css-modify.css';
+   document.getElementById('logo').src='img/gifOF_logo_dark.png';
   var ultimo = document.querySelector('boton-li');
   document.div.remove(ultimo);
 }
@@ -260,3 +261,5 @@ function resultadoSugerido() {
       }
     });
 }
+
+

@@ -68,7 +68,7 @@ function stopRecording() {
 function uploadGif(gif) {
   document.querySelector('.gif-preview-container').innerHTML = `
   <div class='uploading-gif'>
-    <img src="./images/globe_img.png">
+    <img src="./img/globe_img.png">
     <p class='uploading-gif-title'>Estamos subiendo tu guifo...<p>
     <div class="progress-bar" id="progress-bar">
       <ul>
@@ -99,7 +99,7 @@ function uploadGif(gif) {
   `
   
   fetch(
-    "https://upload.giphy.com/v1/gifs?api_key=xBWsI1LWcGLChS6L9d5ucODsG0BfkNEx",
+    "https://upload.giphy.com/v1/gifs?api_key=WCBtXMmRUP3tRuBx84k3dbp0k3qpYxqf",
     {
       method: "POST",
       body: gif
@@ -116,7 +116,7 @@ function uploadGif(gif) {
     .then(data => {
       console.log(data);
       fetch(
-        `https://api.giphy.com/v1/gifs/${data.data.id}?&api_key=xBWsI1LWcGLChS6L9d5ucODsG0BfkNEx`
+        `https://api.giphy.com/v1/gifs/${data.data.id}?&api_key=WCBtXMmRUP3tRuBx84k3dbp0k3qpYxqf`
       )
         .then(response => {
           return response.json();
@@ -129,7 +129,7 @@ function uploadGif(gif) {
           let alertGif = document.createElement('div');
           alertGif.className = 'alert-gif';
           alertGif.innerHTML = `
-          <p class='title-modal'> Guifo subido con éxito! <span style='float: right'><img id='closeModal' src="./images/close.svg"></span></p>
+          <p class='title-modal'> Guifo subido con éxito! <span style='float: right'><img id='closeModal' src="./img/close.svg"></span></p>
           <div class='content-modal'>
             <img class='gif-modal' src='${data.data.images.original.url}'>
             <div class='gif-modal-btns'>
@@ -138,7 +138,7 @@ function uploadGif(gif) {
             </div>
           <div>
           `;
-          document.querySelector('.content').style.filter = 'grayscale(70%) blur(2px)';
+        /*  document.querySelector('.content').style.filter = 'grayscale(70%) blur(2px)';*/
           document.querySelector('.top-bar').style.filter = 'grayscale(70%) blur(2px)';
           document.body.append(alertGif);
           document.getElementById('closeModal').addEventListener('click', () => {
