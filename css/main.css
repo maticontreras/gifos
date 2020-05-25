@@ -2013,6 +2013,194 @@ line-height: 26px;
 }
 
   @media screen and (max-width: 768px) {
+
+
+    .barraprincipal {
+      display: none;
+    }
+
+    .logo{
+       margin-left: 182px;
+    }
+
+    .search-content {
+      width: 40%;
+      display: flex;
+      margin-left: 10px;
+      flex-direction: column;
+      color: white;
+      background: #e6e6e6;
+      box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+      margin-top: 35px;
+  }
+
+  .tesugerimos {
+    width: 40%;
+    height: 32px;
+    background: #FFFAFE;
+    border: 1px solid #E6BBE2;
+    box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+    margin-top: 64px;
+    margin-left: 10px;
+}
+
+
+#contenido-sugerencia {
+  height: 300px;
+  width: 100%;
+  background-color: #f5dbf1;
+  margin-top: 19px;
+  display: inline-block;
+  /* flex-wrap: nowrap; */
+  padding-top: 17px;
+}
+
+.div-tesugerimos0 {
+  width: 446px;
+  height: 298px;
+  margin-left: 29px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: #B4B4B4;
+}
+
+.div-tesugerimos1 {
+  width: 446px;
+  height: 298px;
+  margin-left: 29px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: #B4B4B4;
+}
+
+.div-tesugerimos2 {
+  width: 446px;
+  height: 298px;
+  margin-left: 29px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: #B4B4B4;
+}
+
+.div-tesugerimos3 {
+  width: 446px;
+  height: 298px;
+  margin-left: 29px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: #B4B4B4;
+}
+
+.trendy {
+  width: 40%;
+  height: 32px;
+  background: #FFFAFE;
+  border: 1px solid #E6BBE2;
+  box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+  margin-top: 44px;
+  margin-left: 10px;
+}
+
+.div-tendencias0 {
+  width: 446px;
+  height: 298px;
+  background-color: #B4B4B4;
+  margin-left: 29px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.div-tendencias1 {
+  width: 446px;
+  height: 298px;
+  background-color: #B4B4B4;
+  margin-left: 29px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.div-tendencias2 {
+  width: 446px;
+  height: 298px;
+  background-color: #B4B4B4;
+  margin-left: 29px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.div-tendencias3 {
+  width: 446px;
+  height: 298px;
+  background-color: #B4B4B4;
+  margin-left: 29px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.div-tendencias4 {
+  width: 446px;
+  height: 298px;
+  background-color: #B4B4B4;
+  margin-left: 29px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.div-tendencias5 {
+  width: 446px;
+  height: 298px;
+  background-color: #B4B4B4;
+  margin-left: 29px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.div-tendencias6 {
+  width: 446px;
+  height: 298px;
+  background-color: #B4B4B4;
+  margin-left: 29px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.div-tendencias7 {
+  width: 446px;
+  height: 298px;
+  background-color: #B4B4B4;
+  margin-left: 29px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.div-tendencias8 {
+  width: 446px;
+  height: 298px;
+  background-color: #B4B4B4;
+  margin-left: 29px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.div-tendencias9 {
+  width: 446px;
+  height: 298px;
+  background-color: #B4B4B4;
+  margin-left: 29px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+.menu {
+  width: 450px;
+  height: 50px;
+  margin-top: 18px;
+  background-color: #f5dbf1;
+  list-style: none;
+  margin-left: -10px;
+  }
     .create-gif-section,
     .video-recording {
       width: 100%;
@@ -2061,4 +2249,4 @@ line-height: 26px;
       width: 90%;
     }
   }
-  
+    
