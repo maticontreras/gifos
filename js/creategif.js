@@ -143,7 +143,7 @@ function uploadGif(gif) {
           document.body.append(alertGif);
           document.getElementById('closeModal').addEventListener('click', () => {
             document.querySelector('.alert-gif').style.display = 'none';
-            window.location.href = "./my-gifos.html";
+            //window.location.href = "./my-gifos.html";
           });
         });
     });

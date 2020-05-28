@@ -2014,6 +2014,11 @@ line-height: 26px;
 
   @media screen and (max-width: 768px) {
 
+    .div-wrapper{
+      width:480px;
+      margin-left: 30px;
+      height:100%;
+    }
 
     .barraprincipal {
       display: none;

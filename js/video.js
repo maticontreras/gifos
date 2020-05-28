@@ -138,12 +138,12 @@ function startRecording() {
               </div>
             <div>
             `;
-            // document.querySelector('.content').style.filter = 'grayscale(70%) blur(2px)';
-            // document.querySelector('.top-bar').style.filter = 'grayscale(70%) blur(2px)';
-            // document.body.append(alertGif);
-            //document.getElementById('closeModal').addEventListener('click', () => {
-            //  document.querySelector('.alert-gif').style.display = 'none';
-            //z  window.location.href = "./my-gifos.html";
+             document.querySelector('.content').style.filter = 'grayscale(70%) blur(2px)';
+             document.querySelector('.top-bar').style.filter = 'grayscale(70%) blur(2px)';
+             document.body.append(alertGif);
+             document.getElementById('closeModal').addEventListener('click', () => {
+             document.querySelector('.alert-gif').style.display = 'none';
+             window.location.href = "misgifos.html";
             });
           });
       });
