@@ -20,20 +20,41 @@ function getSearchResults() {
 
 function cargarimagenes(resultado){
      let basededatos = resultado;
-     var i;
+     /*var i;*/
      let $items = document.querySelector('#seccion-tendencias');
-     for(i in basededatos.data ){
+     /*let divtittle = document.createElement('div');
+     divtittle.classList.add('resultsearch');
+     $items.appendChild(divtittle);*/
+     
+     /*for(i in basededatos.data )*/
+     for (let i=0; i<=24; i++){
         var title= basededatos.data[i].title;
         var imagen = basededatos.data[i].images.fixed_width.url;
         let miNodoCardBody = document.createElement('div');
+        let listtittle = document.createElement('div');
+
+        listtittle.classList.add('footertittle'+ i);
+        listtittle.appendChild(document.createTextNode(title));
+
+
         miNodoCardBody.classList.add('div-automatico'+ i);
         miNodoCardBody.classList.add('div-imagen-busqueda');
         let miNodoImagen = document.createElement('img');
         miNodoImagen.classList.add('img-fluid');
         miNodoImagen.setAttribute('src', imagen);
+
+          miNodoCardBody.addEventListener("mouseover",function(event){
+          document.querySelector('.footertittle'+i).style.display="block";
+         })
+           miNodoCardBody.addEventListener("mouseout",function(event){
+          document.querySelector('.footertittle'+i).style.display="none";
+         })
         miNodoCardBody.appendChild(miNodoImagen);
-        $items.appendChild(miNodoCardBody); 
-    }   
+        miNodoCardBody.appendChild(listtittle);
+        $items.appendChild(miNodoCardBody);  
+    }  
+    resultsearch = document.querySelector(".search-results").style.display = "block";
+    autoComp = document.querySelector(".autocomplete-content").style.display = "none";
 }
 
 function getTrendingData() {
@@ -47,7 +68,7 @@ function getTrendingData() {
        var _tenGifs = document.getElementById("tenGifs");
        for(let i=0; i< 10 ;i++) {
          var trendyImagen = res.data[i].images.fixed_width.url;
-         var urlmore = res.data[i].title;
+         var urlmore = res.data[i].title;      
          var node = document.createElement('div');
          var listtittle = document.createElement('div');
          node.classList.add('div-tendencias'+ i);
@@ -81,7 +102,6 @@ function getTrendingData() {
     .then(data => data.json())
     .then(res => {
      var _teSugerimos = document.getElementById("contenido-sugerencia");
-     
        var teSugerimosImagen = res.data[j].images.downsized_large.url;
        var node = document.createElement('div');
        var titulo = document.createElement('div');
@@ -263,3 +283,20 @@ function resultadoSugerido() {
 }
 
 
+function clearresults(){
+  document.getElementById("seccion-tendencias").innerHTML = "";
+  document.querySelector(".search-results").style.display = "none";
+  
+}
+
+
+function copiarlinkGuifo(url){
+   alert(url);
+
+}
+
+
+function descargarGuifo(){
+
+
+}

@@ -108,6 +108,7 @@ function uploadGif(gif) {
     .then(response => {
       if (response.status === 200) {
         console.log('Gif subido!');
+        document.querySelector('.video-recording').style.display = "none";
         return response.json();
       } else {
         console.log('error.');
@@ -127,24 +128,31 @@ function uploadGif(gif) {
             JSON.stringify(data.data)
           );
           let alertGif = document.createElement('div');
+          var url = ' ${data.data.images.original.url}';
           alertGif.className = 'alert-gif';
           alertGif.innerHTML = `
-          <p class='title-modal'> Guifo subido con éxito! <span style='float: right'><img id='closeModal' src="./img/close.svg"></span></p>
+          <div class='container-gif'>
+          <p class='title-modal-creat'> Guifo subido con éxito! <span style='float: right'><img id='closeModal' src="./img/close.svg"></span></p>
           <div class='content-modal'>
+            
             <img class='gif-modal' src='${data.data.images.original.url}'>
+           
             <div class='gif-modal-btns'>
-              <button>Copiar Enlace Guifo</button>
-              <button>Descargar Guifo</button>
+            <span class='guifo-modal'>Guifo subido con éxito! </span>
+              <button onclick = "copiarlinkGuifo(url)">Copiar Enlace Guifo</button>
+              <button onclick = "descargarGuifo()">Descargar Guifo</button>
             </div>
           <div>
+          </div>
           `;
-        /*  document.querySelector('.content').style.filter = 'grayscale(70%) blur(2px)';*/
+          document.querySelector('.main-container').style.filter = 'grayscale(70%) blur(2px)';
           document.querySelector('.top-bar').style.filter = 'grayscale(70%) blur(2px)';
           document.body.append(alertGif);
           document.getElementById('closeModal').addEventListener('click', () => {
-            document.querySelector('.alert-gif').style.display = 'none';
-            //window.location.href = "./my-gifos.html";
+          document.querySelector('.alert-gif').style.display = 'none';
+            window.location.href = "./index.html";
           });
+          
         });
     });
 }
@@ -191,3 +199,5 @@ function animateProgressBar() {
     }
   }, 400);
 };
+
+
