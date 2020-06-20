@@ -262,6 +262,7 @@ function resultadoSugerido() {
   search = document.getElementById("search").value;
   if (search === "") {
     autoComp.style.display = "none";
+    clearresults();
   }
   fetch(`${APIurl}search?q=${search}&api_key=${APIkey}&limit=3`)
     .then(response => {
